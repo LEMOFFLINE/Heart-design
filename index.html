@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居心空间 | heart design</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-box"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="public/HeaderLogo.png" alt="heart design" class="header-logo">
+            </div>
+            <nav class="header-center">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="why-us.html">我们的优势</a></li>
+                    <li><a href="portfolio.html">作品集</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="lang-switch">
+                    <button class="lang-btn">
+                        <span>中文</span>
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                            <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="zh">中文</button>
+                        <button class="lang-option" data-lang="en">English</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Full Page Sections -->
+    <div id="fullpage">
+        <!-- Section 1: Hero Slider -->
+        <div class="section" data-anchor="page1">
+            <div class="hero-section">
+                <div class="hero-slider">
+                    <div class="hero-slide active">
+                        <img src="public/HomePage/heropage_1.jpg" alt="Hero 1">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="public/HomePage/heropage_2.jpg" alt="Hero 2">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="public/HomePage/heropage_3.jpg" alt="Hero 3">
+                    </div>
+                </div>
+                <div class="hero-slogan">
+                    <h1>居心所向 · 空间所往</h1>
+                </div>
+                <div class="hero-dots">
+                    <div class="hero-dot active" data-slide="0"></div>
+                    <div class="hero-dot" data-slide="1"></div>
+                    <div class="hero-dot" data-slide="2"></div>
+                </div>
+            </div>
+            <a href="#page2" class="scroll-down">
+                <i class="arrow-down"></i>
+            </a>
+        </div>
+
+        <!-- Section 2: Company Info & About -->
+        <div class="section section-about" data-anchor="page2">
+            <div class="about-background">
+                <img src="public/AboutUs.jpg" alt="About Us Background">
+            </div>
+            <div class="section-container">
+                <div class="about-content">
+                    <!-- Left Panel: Company Info -->
+                    <div class="about-left-panel fade-up">
+                        <div class="about-panel-content">
+                            <div class="about-header">
+                                <h2 class="about-title-cn">关于居心空间</h2>
+                                <h3 class="about-title-en">ABOUT HEART DESIGN</h3>
+                                <div class="about-divider"></div>
+                            </div>
+
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <div class="stat-label">成立于</div>
+                                    <div class="stat-number">2017</div>
+                                </div>
+                                <div class="stat-divider"></div>
+                                <div class="stat-item">
+                                    <div class="stat-number">200+</div>
+                                    <div class="stat-label">合作伙伴</div>
+                                </div>
+                                <div class="stat-divider"></div>
+                                <div class="stat-item">
+                                    <div class="stat-number">100000+</div>
+                                    <div class="stat-label">服务客户</div>
+                                </div>
+                            </div>
+
+                            <div class="about-description">
+                                <p class="about-text-cn">
+                                    居心空间创立于2017年，是一家专注于高端住宅与商业空间设计的先锋设计事务所。我们以"居心所向，空间所往"为核心理念，
+                                    将东方美学哲学与现代设计语言完美融合，为每一位客户打造超越期待的空间体验。
+                                    多年来，我们已为超过100,000位客户实现了理想人居梦想，与200+知名品牌建立深度合作关系，
+                                    作品屡获国际设计大奖，被业界誉为"空间美学的革新者"。
+                                </p>
+                                <p class="about-text-en">
+                                    Founded in 2017, heart design is a pioneering design studio specializing in high-end residential and commercial space design.
+                                    Guided by our philosophy "Design Your Heart's Desire," we seamlessly blend Eastern aesthetic philosophy with modern design language,
+                                    creating spatial experiences that exceed expectations for every client.
+                                    Over the years, we have realized ideal living dreams for over 100,000 clients and established deep partnerships with 200+ renowned brands.
+                                    Our works have won numerous international design awards, earning us the reputation of "Innovators of Spatial Aesthetics" in the industry.
+                                </p>
+                            </div>
+
+                            <div class="about-tagline">
+                                <p class="tagline-cn">技术创新 · 理论研究并重</p>
+                                <p class="tagline-en">Innovation And Theoretical Research</p>
+                            </div>
+                            <div class="about-cta">
+                                <a href="about.html" class="cta-button">了解更多 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Why Us (Advantages) -->
+        <div class="section section-why" data-anchor="page3">
+            <div class="why-background">
+                <img id="why-bg-image" src="public/OurAdvantages/Complete Design Solution Based on floor plan.jpg" alt="Why Us Background">
+            </div>
+
+            <div class="section-container">
+                <div class="why-content">
+                    <!-- Left Panel: Advantage List -->
+                    <div class="why-left-panel fade-up">
+                        <div class="why-panel-header">
+                            <h2 class="why-title">我们的优势</h2>
+                            <h3 class="why-subtitle">WHY CHOOSE US</h3>
+                            <div class="why-divider"></div>
+                        </div>
+
+                        <div class="why-advantages-list">
+                            <!-- Advantage 1 -->
+                            <div class="advantage-item active" data-index="0" data-image="public/OurAdvantages/Complete Design Solution Based on floor plan.jpg">
+                                <div class="advantage-number">01</div>
+                                <div class="advantage-content">
+                                    <div class="advantage-title-cn">定制化全案设计</div>
+                                    <div class="advantage-title-en">Customized Full-Service Design</div>
+                                </div>
+                                <div class="advantage-arrow">→</div>
+                            </div>
+
+                            <!-- Advantage 2 -->
+                            <div class="advantage-item" data-index="1" data-image="public/OurAdvantages/Reliable  funiture source .jpg">
+                                <div class="advantage-number">02</div>
+                                <div class="advantage-content">
+                                    <div class="advantage-title-cn">全球顶级供应链</div>
+                                    <div class="advantage-title-en">Global Premium Supply Chain</div>
+                                </div>
+                                <div class="advantage-arrow">→</div>
+                            </div>
+
+                            <!-- Advantage 3 -->
+                            <div class="advantage-item" data-index="2" data-image="public/OurAdvantages/eco-friendly&non-toxic building materials.jpg">
+                                <div class="advantage-number">03</div>
+                                <div class="advantage-content">
+                                    <div class="advantage-title-cn">国际环保标准</div>
+                                    <div class="advantage-title-en">International Eco-Standards</div>
+                                </div>
+                                <div class="advantage-arrow">→</div>
+                            </div>
+
+                            <!-- Advantage 4 -->
+                            <div class="advantage-item" data-index="3" data-image="public/OurAdvantages/Rigorously supervised renovation.jpg">
+                                <div class="advantage-number">04</div>
+                                <div class="advantage-content">
+                                    <div class="advantage-title-cn">德系精工工艺</div>
+                                    <div class="advantage-title-en">German Precision Craftsmanship</div>
+                                </div>
+                                <div class="advantage-arrow">→</div>
+                            </div>
+
+                            <!-- Advantage 5 -->
+                            <div class="advantage-item" data-index="4" data-image="public/OurAdvantages/One year warranty.jpg">
+                                <div class="advantage-number">05</div>
+                                <div class="advantage-content">
+                                    <div class="advantage-title-cn">终身管家服务</div>
+                                    <div class="advantage-title-en">Lifetime Concierge Service</div>
+                                </div>
+                                <div class="advantage-arrow">→</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Bottom: Description Panel -->
+                    <div class="why-description-panel fade-up">
+                        <div class="description-content">
+                            <h4 class="description-title" data-cn="全套设计解决方案" data-en="Complete Design Solution">全套设计解决方案</h4>
+                            <div class="description-divider"></div>
+                            <p class="description-text" data-cn="根据户型和客户需求，提供从空间规划到软装搭配的一站式设计服务，打造独一无二的理想空间。"
+                               data-en="Providing one-stop design service from space planning to decoration, tailored to your floor plan and requirements, creating a unique ideal space.">
+                                根据户型和客户需求，提供从空间规划到软装搭配的一站式设计服务，打造独一无二的理想空间。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Portfolio -->
+        <div class="section section-portfolio" data-anchor="page4">
+            <div class="section-container">
+                <div class="portfolio-layout">
+
+                    <!-- Left Sidebar: Title -->
+                    <div class="portfolio-sidebar">
+                        <div class="portfolio-decoration-line"></div>
+                        <h1 class="portfolio-title-cn">作品集</h1>
+                        <h2 class="portfolio-title-en">PORTFOLIO</h2>
+                        <p class="portfolio-subtitle">2020-2024<br>精选作品</p>
+                        <div class="portfolio-decoration-line short"></div>
+                    </div>
+
+                    <!-- Right Content: Cases -->
+                    <div class="portfolio-main">
+                        <!-- Case 1 -->
+                        <div class="portfolio-case-compact fade-up">
+                            <div class="case-image">
+                                <div class="image-frame">
+                                    <img src="public/cases/Show Case.jpg" alt="Modern Minimalist Apartment">
+                                </div>
+                            </div>
+                            <div class="case-info-compact">
+                                <div class="case-title-group">
+                                    <h3>现代简约公寓</h3>
+                                    <p class="case-tags">住宅 · 现代简约</p>
+                                    <p class="case-details">上海 · 120㎡ · 2024</p>
+                                    <p class="case-award">🏆 2024意大利A'Design Award银奖</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case 2 -->
+                        <div class="portfolio-case-compact fade-up">
+                            <div class="case-image">
+                                <div class="image-frame">
+                                    <img src="public/cases/Show Case2.jpg" alt="Nordic Style Villa">
+                                </div>
+                            </div>
+                            <div class="case-info-compact">
+                                <div class="case-title-group">
+                                    <h3>北欧风格别墅</h3>
+                                    <p class="case-tags">别墅 · 北欧风格</p>
+                                    <p class="case-details">杭州 · 280㎡ · 2024</p>
+                                    <p class="case-award">📖 ELLE DECORATION 2024年度最具人文关怀住宅</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Footer -->
+        <div class="section" data-anchor="page5">
+            <div class="section-container">
+                <footer class="footer-full">
+                    <div class="footer-content">
+                        <div class="footer-section company">
+                            <h4>居心空间</h4>
+                            <p class="address">上海市徐汇区西岸艺术中心</p>
+                            <p class="hours">周一至周五 9:30-18:30</p>
+                        </div>
+                        <div class="footer-section contact">
+                            <h4>联系方式</h4>
+                            <p class="email">邮箱: hello@juxin-space.com</p>
+                            <p class="phone">电话: +86 21 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>© 2025 居心空间 heart design. All rights reserved.</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,3 +1,36 @@
+/* ==================== Font Face Definitions ==================== */
+/* CDN Version - Easiest, works without local files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+
+/* Local Font Version - Uncomment after downloading font files
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/NotoSansSC-Light.woff2') format('woff2'),
+         url('../fonts/NotoSansSC-Light.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/NotoSansSC-Regular.woff2') format('woff2'),
+         url('../fonts/NotoSansSC-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/NotoSansSC-Bold.woff2') format('woff2'),
+         url('../fonts/NotoSansSC-Bold.woff') format('woff');
+    font-display: swap;
+}
+*/
+
 /* ==================== Reset & Base Styles ==================== */
 * {
     margin: 0;
@@ -57,14 +90,14 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 20px 20px;
     transition: all 0.3s ease;
 }
 
 .header-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 12px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,9 +108,74 @@ body {
     align-items: center;
 }
 
+.header-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
 .header-logo {
-    height: 50px;
+    height: 40px;
+    max-width: 40px;
+    width: auto;
     object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    color: var(--text-dark);
+    letter-spacing: 4px;
+    line-height: 40px;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.brand-name.zh {
+    display: inline-block;
+}
+
+.brand-name.en {
+    display: none;
+}
+
+/* English mode */
+body.lang-en .brand-name.zh {
+    display: none;
+}
+
+body.lang-en .brand-name.en {
+    display: inline-block;
+}
+
+/* About section language switching */
+.about-text-en {
+    display: none;
+}
+
+.tagline-en {
+    display: none;
+}
+
+body.lang-en .about-text-cn {
+    display: none;
+}
+
+body.lang-en .about-text-en {
+    display: block;
+}
+
+body.lang-en .tagline-cn {
+    display: none;
+}
+
+body.lang-en .tagline-en {
+    display: block;
 }
 
 .header-center {
@@ -260,6 +358,7 @@ body {
 
 .section {
     position: relative;
+    height: 70vh;
     overflow: hidden;
 }
 
@@ -1244,15 +1343,15 @@ body {
 
 /* Add hover effect enhancement */
 .portfolio-case {
-    transition: all 0.5s ease;
+    transition: box-shadow 0.5s ease;
 }
 
 .portfolio-case:hover {
-    transform: translateX(10px);
+    transform: none;
 }
 
 .portfolio-case.case-2:hover {
-    transform: translateX(-10px);
+    transform: none;
 }
 
 .portfolio-case:hover .case-title {
@@ -1536,6 +1635,22 @@ body {
     line-height: 2;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 10px;
+}
+
+.footer-section .address,
+.footer-section .hours {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.footer-section .address-detail,
+.footer-section .hours-detail {
+    margin-bottom: 15px;
+}
+
+.footer-section .social-item {
+    margin-bottom: 8px;
 }
 
 .footer-bottom {

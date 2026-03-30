@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们 | 居心空间 heart design</title>
+    <title>联系我们 | 居心空间 heart studio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pages.css">
 </head>
@@ -16,7 +16,9 @@
         <div class="header-container">
             <div class="header-left">
                 <a href="index.html" class="header-logo-link">
-                    <img src="public/HeaderLogo.png" alt="heart design" class="header-logo">
+                    <img src="public/logo.png" alt="heart studio" class="header-logo">
+                    <span class="brand-name zh">居心设计</span>
+                    <span class="brand-name en">Heart Studio</span>
                 </a>
             </div>
             <nav class="header-center">
@@ -53,7 +55,6 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">联系我们</h1>
-            <h2 class="hero-subtitle">CONTACT US</h2>
             <div class="hero-divider"></div>
         </div>
     </section>
@@ -61,163 +62,74 @@
     <!-- Main Content -->
     <main class="page-main">
         <div class="page-container">
-            <div class="contact-grid">
-                <!-- Contact Information -->
-                <div class="contact-info-side">
-                    <div class="contact-info-card">
-                        <h3>上海总部</h3>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-info-content">
-                                <h4>地址</h4>
-                                <p>上海市徐汇区西岸艺术中心A座16/19楼</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-info-content">
-                                <h4>电话</h4>
-                                <p>+86 21 3362 6551 / 3362 6620</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">✉️</div>
-                            <div class="contact-info-content">
-                                <h4>邮箱</h4>
-                                <p>hello@juxin-space.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">🕐</div>
-                            <div class="contact-info-content">
-                                <h4>工作时间</h4>
-                                <p>周一至周五 9:30-18:30</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-card">
-                        <h3>杭州分部</h3>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-info-content">
-                                <h4>地址</h4>
-                                <p>杭州市拱墅区大关路96号<br>绿地运河商务中心7号楼6楼</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-info-content">
-                                <h4>电话</h4>
-                                <p>+86 571 8530 1560</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">✉️</div>
-                            <div class="contact-info-content">
-                                <h4>邮箱</h4>
-                                <p>hz-hr@juxin-space.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-card">
-                        <h3>社交媒体</h3>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-info-content">
-                                <h4>微信公众号</h4>
-                                <p>居心空间</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📸</div>
-                            <div class="contact-info-content">
-                                <h4>小红书</h4>
-                                <p>@居心空间</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">🌐</div>
-                            <div class="contact-info-content">
-                                <h4>Instagram</h4>
-                                <p>@juxinspace</p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Combined Card: image left, form right -->
+            <div class="contact-combined-card">
+                <div class="contact-card-image">
+                    <img src="public/inquiry.jpg" alt="Contact Us">
                 </div>
+                <div class="contact-card-form">
+                    <h3 class="contact-form-title">在线咨询</h3>
+                    <p class="form-subtitle">请填写以下信息，我们会在24小时内与您联系</p>
 
-                <!-- Contact Form -->
-                <div class="contact-form-side">
-                    <div class="contact-form-card">
-                        <h3>在线咨询</h3>
-                        <p class="form-subtitle">请填写以下信息，我们会在24小时内与您联系</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="label-name">姓名 *</label>
+                            <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                        </div>
 
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">姓名 *</label>
-                                <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="phone" class="label-phone">电话 *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="请输入您的联系电话" required>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="email">邮箱 *</label>
-                                <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="service" class="label-service">咨询类型</label>
+                            <select id="service" name="service">
+                                <option value="">请选择咨询类型</option>
+                                <option value="phone">电话咨询</option>
+                                <option value="quote">方案报价</option>
+                                <option value="visit">预约参观</option>
+                                <option value="collaboration">商务合作</option>
+                                <option value="other">其他咨询</option>
+                            </select>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="phone">电话 *</label>
-                                <input type="tel" id="phone" name="phone" placeholder="请输入您的联系电话" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="message" class="label-message">留言</label>
+                            <textarea id="message" name="message" placeholder="请简单描述您的需求（项目类型、面积、预算范围等）"></textarea>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="service">服务类型</label>
-                                <select id="service" name="service">
-                                    <option value="">请选择服务类型</option>
-                                    <option value="design">室内设计</option>
-                                    <option value="renovation">装修施工</option>
-                                    <option value="soft">软装搭配</option>
-                                    <option value="consultation">设计咨询</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">留言</label>
-                                <textarea id="message" name="message" placeholder="请简单描述您的需求（项目类型、面积、预算范围等）"></textarea>
-                            </div>
-
-                            <button type="submit" class="submit-btn">发送咨询</button>
-                        </form>
-                    </div>
+                        <button type="submit" class="submit-btn">提交咨询</button>
+                    </form>
                 </div>
             </div>
 
             <!-- Service Process -->
             <section class="content-section">
                 <div class="section-header">
-                    <h3 class="section-title">服务流程</h3>
-                    <h4 class="section-subtitle">SERVICE PROCESS</h4>
+                    <h3 class="section-title contact-process-title">服务流程</h3>
                     <div class="section-divider"></div>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 50px;">
-                    <div style="text-align: center; padding: 30px 20px; background: var(--white); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                <div class="process-steps" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 50px;">
+                    <div class="process-step" style="text-align: center; padding: 30px 20px; background: var(--white); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
                         <div style="font-size: 36px; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">01</div>
-                        <h5 style="font-size: 18px; color: var(--text-dark); margin-bottom: 10px;">初步咨询</h5>
-                        <p style="font-size: 14px; color: var(--text-light); line-height: 1.6;">免费初步咨询<br>了解项目基本信息和预算范围</p>
+                        <h5 class="step-title" style="font-size: 18px; color: var(--text-dark); margin-bottom: 10px;">初步咨询</h5>
+                        <p class="step-desc" style="font-size: 14px; color: var(--text-light); line-height: 1.6;">免费初步咨询<br>了解项目基本信息和预算范围</p>
                     </div>
-                    <div style="text-align: center; padding: 30px 20px; background: var(--white); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div class="process-step" style="text-align: center; padding: 30px 20px; background: var(--white); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
                         <div style="font-size: 36px; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">02</div>
-                        <h5 style="font-size: 18px; color: var(--text-dark); margin-bottom: 10px;">深度沟通</h5>
-                        <p style="font-size: 14px; color: var(--text-light); line-height: 1.6;">设计师上门测量<br>深入了解客户需求和生活方式</p>
+                        <h5 class="step-title" style="font-size: 18px; color: var(--text-dark); margin-bottom: 10px;">深度沟通</h5>
+                        <p class="step-desc" style="font-size: 14px; color: var(--text-light); line-height: 1.6;">设计师上门测量<br>深入了解客户需求和生活方式</p>
                     </div>
-                    <div style="text-align: center; padding: 30px 20px; background: var(--white); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div class="process-step" style="text-align: center; padding: 30px 20px; background: var(--white); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
                         <div style="font-size: 36px; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">03</div>
-                        <h5 style="font-size: 18px; color: var(--text-dark); margin-bottom: 10px;">方案设计</h5>
-                        <p style="font-size: 14px; color: var(--text-light); line-height: 1.6;">15个工作日内提供3套方案<br>客户确认后进行深化设计</p>
+                        <h5 class="step-title" style="font-size: 18px; color: var(--text-dark); margin-bottom: 10px;">方案设计</h5>
+                        <p class="step-desc" style="font-size: 14px; color: var(--text-light); line-height: 1.6;">15个工作日内提供3套方案<br>客户确认后进行深化设计</p>
                     </div>
-                    <div style="text-align: center; padding: 30px 20px; background: var(--white); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div class="process-step" style="text-align: center; padding: 30px 20px; background: var(--white); border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
                         <div style="font-size: 36px; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">04</div>
-                        <h5 style="font-size: 18px; color: var(--text-dark); margin-bottom: 10px;">施工落地</h5>
-                        <p style="font-size: 14px; color: var(--text-light); line-height: 1.6;">专业施工团队进场<br>设计师每周2次现场巡查</p>
+                        <h5 class="step-title" style="font-size: 18px; color: var(--text-dark); margin-bottom: 10px;">施工落地</h5>
+                        <p class="step-desc" style="font-size: 14px; color: var(--text-light); line-height: 1.6;">专业施工团队进场<br>设计师每周2次现场巡查</p>
                     </div>
                 </div>
             </section>
@@ -225,26 +137,25 @@
             <!-- FAQ -->
             <section class="content-section" style="margin-top: 80px;">
                 <div class="section-header">
-                    <h3 class="section-title">常见问题</h3>
-                    <h4 class="section-subtitle">FAQ</h4>
+                    <h3 class="section-title contact-faq-title">常见问题</h3>
                     <div class="section-divider"></div>
                 </div>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <div style="background: var(--white); padding: 30px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h5 style="font-size: 18px; color: var(--primary-color); margin-bottom: 15px; font-weight: 700;">Q: 你们的收费标准是怎样的？</h5>
-                        <p style="font-size: 15px; line-height: 1.8; color: var(--text-dark);">A: 我们的设计费根据项目类型和面积而定，通常在200-800元/㎡之间。别墅和商业空间项目单独报价。具体请联系我们的顾问获取免费报价。</p>
+                <div class="faq-list" style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item" style="background: var(--white); padding: 30px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h5 class="faq-question" style="font-size: 18px; color: var(--primary-color); margin-bottom: 15px; font-weight: 700;">Q: 你们的收费标准是怎样的？</h5>
+                        <p class="faq-answer" style="font-size: 15px; line-height: 1.8; color: var(--text-dark);">A: 我们的设计费根据项目类型和面积而定，通常在200-800元/㎡之间。别墅和商业空间项目单独报价。具体请联系我们的顾问获取免费报价。</p>
                     </div>
-                    <div style="background: var(--white); padding: 30px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h5 style="font-size: 18px; color: var(--primary-color); margin-bottom: 15px; font-weight: 700;">Q: 设计周期一般需要多久？</h5>
-                        <p style="font-size: 15px; line-height: 1.8; color: var(--text-dark);">A: 根据项目大小，通常设计周期15-45天。施工周期住宅类3-6个月，商业空间6-12个月。</p>
+                    <div class="faq-item" style="background: var(--white); padding: 30px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h5 class="faq-question" style="font-size: 18px; color: var(--primary-color); margin-bottom: 15px; font-weight: 700;">Q: 设计周期一般需要多久？</h5>
+                        <p class="faq-answer" style="font-size: 15px; line-height: 1.8; color: var(--text-dark);">A: 根据项目大小，通常设计周期15-45天。施工周期住宅类3-6个月，商业空间6-12个月。</p>
                     </div>
-                    <div style="background: var(--white); padding: 30px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h5 style="font-size: 18px; color: var(--primary-color); margin-bottom: 15px; font-weight: 700;">Q: 接受外地项目吗？</h5>
-                        <p style="font-size: 15px; line-height: 1.8; color: var(--text-dark);">A: 当然！我们在全国都有项目经验，并设有杭州分部。外地项目我们提供设计+施工+软装全套服务，全程跟进。</p>
+                    <div class="faq-item" style="background: var(--white); padding: 30px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h5 class="faq-question" style="font-size: 18px; color: var(--primary-color); margin-bottom: 15px; font-weight: 700;">Q: 接受外地项目吗？</h5>
+                        <p class="faq-answer" style="font-size: 15px; line-height: 1.8; color: var(--text-dark);">A: 当然！我们在全国都有项目经验，并设有杭州分部。外地项目我们提供设计+施工+软装全套服务，全程跟进。</p>
                     </div>
-                    <div style="background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h5 style="font-size: 18px; color: var(--primary-color); margin-bottom: 15px; font-weight: 700;">Q: 如何保证施工质量？</h5>
-                        <p style="font-size: 15px; line-height: 1.8; color: var(--text-dark);">A: 我们采用德国DIN标准施工体系，16道质量检测节点，第三方监理验收，终身质保承诺。</p>
+                    <div class="faq-item" style="background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h5 class="faq-question" style="font-size: 18px; color: var(--primary-color); margin-bottom: 15px; font-weight: 700;">Q: 如何保证施工质量？</h5>
+                        <p class="faq-answer" style="font-size: 15px; line-height: 1.8; color: var(--text-dark);">A: 我们采用德国DIN标准施工体系，16道质量检测节点，第三方监理验收，终身质保承诺。</p>
                     </div>
                 </div>
             </section>
@@ -256,18 +167,26 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section company">
-                    <h4>居心空间</h4>
-                    <p class="address">上海市徐汇区西岸艺术中心</p>
-                    <p class="hours">周一至周五 9:30-18:30</p>
+                    <h4 class="footer-company">居心空间</h4>
+                    <p class="address">地址</p>
+                    <p class="address-detail">上海市徐汇区西岸艺术中心</p>
+                    <p class="hours">工作时间</p>
+                    <p class="hours-detail">周一至周五 9:30-18:30</p>
                 </div>
                 <div class="footer-section contact">
-                    <h4>联系方式</h4>
-                    <p class="email">邮箱: hello@juxin-space.com</p>
-                    <p class="phone">电话: +86 21 1234 5678</p>
+                    <h4 class="footer-contact">联系方式</h4>
+                    <p class="email footer-email"><span class="footer-email-label">邮箱:</span> <span class="footer-email-value">office@heartstudio.com</span></p>
+                    <p class="phone footer-phone"><span class="footer-phone-label">电话:</span> <span class="footer-phone-value">+86 21 1234 5678</span></p>
+                </div>
+                <div class="footer-section social">
+                    <h4 class="footer-social">社交媒体账号</h4>
+                    <p class="social-item footer-social-1">小红书 @居心设计</p>
+                    <p class="social-item footer-social-2">微博 @居心设计</p>
+                    <p class="social-item footer-social-3">Instagram @Heart_Studio</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 居心空间 heart design. All rights reserved.</p>
+                <p class="footer-copyright">© 2026 居心空间 heart studio. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -277,6 +196,7 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/pages.js"></script>
 </body>
 </html>

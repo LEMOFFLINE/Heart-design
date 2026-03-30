@@ -1,4 +1,4 @@
-// ==================== Language Data ====================
+// ==================== Language Data (kept for description panel fallback) ====================
 const translations = {
     zh: {
         nav: {
@@ -28,7 +28,7 @@ const translations = {
             aboutTitle: '关于居心空间',
             aboutTitleEn: 'ABOUT HEART DESIGN',
             aboutDesc: '居心空间创立于2017年，是一家专注于高端住宅与商业空间设计的先锋设计事务所。我们以"居心所向，空间所往"为核心理念，将东方美学哲学与现代设计语言完美融合，为每一位客户打造超越期待的空间体验。多年来，我们已为超过100,000位客户实现了理想人居梦想，与200+知名品牌建立深度合作关系，作品屡获国际设计大奖，被业界誉为"空间美学的革新者"。',
-            aboutDescEn: 'Founded in 2017, heart design is a pioneering design studio specializing in high-end residential and commercial space design. Guided by our philosophy "Design Your Heart\'s Desire," we seamlessly blend Eastern aesthetic philosophy with modern design language, creating spatial experiences that exceed expectations for every client. Over the years, we have realized ideal living dreams for over 100,000 clients and established deep partnerships with 200+ renowned brands. Our works have won numerous international design awards, earning us the reputation of "Innovators of Spatial Aesthetics" in the industry.',
+            aboutDescEn: 'Founded in 2017, heart studio is a pioneering design studio specializing in high-end residential and commercial space design. Guided by our philosophy "Design Your Heart\'s Desire," we seamlessly blend Eastern aesthetic philosophy with modern design language, creating spatial experiences that exceed expectations for every client. Over the years, we have realized ideal living dreams for over 100,000 clients and established deep partnerships with 200+ renowned brands. Our works have won numerous international design awards, earning us the reputation of "Innovators of Spatial Aesthetics" in the industry.',
             tagline: '技术创新 · 理论研究并重',
             taglineEn: 'Innovation And Theoretical Research',
             learnMore: '了解更多 →'
@@ -102,9 +102,9 @@ const translations = {
             company: '居心空间',
             address: '上海市徐汇区西岸艺术中心',
             hours: '周一至周五 9:30-18:30',
-            email: 'hello@juxin-space.com',
-            phone: '+86 21 1234 5678',
-            copyright: '© 2025 居心空间 heart design. All rights reserved.'
+            email: '邮箱: office@heartstudio.com',
+            phone: '电话: +86 21 1234 5678',
+            copyright: '© 2026 居心空间 heart studio. All rights reserved.'
         }
     },
     en: {
@@ -132,10 +132,10 @@ const translations = {
             partnersLabel: 'Partners',
             customers: '100000+',
             customersLabel: 'Customers Served',
-            aboutTitle: 'About heart design',
+            aboutTitle: 'About heart studio',
             aboutTitleEn: 'ABOUT HEART DESIGN',
-            aboutDesc: 'heart design is a high-end interior design studio dedicated to creating minimalist, elegant, and harmonious living spaces. We believe every space has a soul, and our mission is to discover and awaken it.',
-            aboutDescEn: 'Founded in 2017, heart design is a pioneering design studio specializing in high-end residential and commercial space design. Guided by our philosophy "Design Your Heart\'s Desire," we seamlessly blend Eastern aesthetic philosophy with modern design language, creating spatial experiences that exceed expectations for every client. Over the years, we have realized ideal living dreams for over 100,000 clients and established deep partnerships with 200+ renowned brands. Our works have won numerous international design awards, earning us the reputation of "Innovators of Spatial Aesthetics" in the industry.',
+            aboutDesc: 'heart studio is a high-end interior design studio dedicated to creating minimalist, elegant, and harmonious living spaces. We believe every space has a soul, and our mission is to discover and awaken it.',
+            aboutDescEn: 'Founded in 2017, heart studio is a pioneering design studio specializing in high-end residential and commercial space design. Guided by our philosophy "Design Your Heart\'s Desire," we seamlessly blend Eastern aesthetic philosophy with modern design language, creating spatial experiences that exceed expectations for every client. Over the years, we have realized ideal living dreams for over 100,000 clients and established deep partnerships with 200+ renowned brands. Our works have won numerous international design awards, earning us the reputation of "Innovators of Spatial Aesthetics" in the industry.',
             tagline: 'Innovation And Theoretical Research',
             taglineEn: 'Innovation And Theoretical Research',
             learnMore: 'Learn More →'
@@ -206,12 +206,12 @@ const translations = {
             ]
         },
         footer: {
-            company: 'heart design',
+            company: 'heart studio',
             address: 'West Bund Art Center, Xuhui District, Shanghai',
             hours: 'Mon-Fri 9:30-18:30',
-            email: 'hello@juxin-space.com',
-            phone: '+86 21 1234 5678',
-            copyright: '© 2025 居心空间 heart design. All rights reserved.'
+            email: '邮箱: office@heartstudio.com',
+            phone: '电话: +86 21 1234 5678',
+            copyright: '© 2026 居心空间 heart studio. All rights reserved.'
         }
     }
 };
@@ -228,9 +228,13 @@ const langOptions = document.querySelectorAll('.lang-option');
 // ==================== Language Switch ====================
 function setLanguage(lang) {
     currentLang = lang;
-    localStorage.setItem('language', lang);
-    updateContent();
+    // applyLang (i18n.js) handles: localStorage, body class, lang button, nav,
+    // hero slogan, about text, advantages list, description panel, stacked cases
+    applyLang(lang);
+    // Update language button display
     updateLangButton();
+    // updateContent handles remaining index.html specifics (footer details, portfolio)
+    updateContent();
 }
 
 function updateLangButton() {
@@ -248,48 +252,11 @@ function updateLangButton() {
 function updateContent() {
     const t = translations[currentLang];
 
-    // Navigation - update by href
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    if (navLinks[0]) navLinks[0].textContent = t.nav.home;
-    if (navLinks[1]) navLinks[1].textContent = t.nav.about;
-    if (navLinks[2]) navLinks[2].textContent = t.nav.why;
-    if (navLinks[3]) navLinks[3].textContent = t.nav.cases;
-    if (navLinks[4]) navLinks[4].textContent = t.nav.contact;
-
-    // Hero Slogan
-    document.querySelector('.hero-slogan h1').textContent = t.hero.slogan;
-
-    // Module 1 - About Us Section
-    const aboutTitleCn = document.querySelector('.about-title-cn');
-    const aboutTitleEn = document.querySelector('.about-title-en');
-    const aboutTextCn = document.querySelector('.about-text-cn');
-    const aboutTextEn = document.querySelector('.about-text-en');
-    const taglineCn = document.querySelector('.tagline-cn');
-    const taglineEn = document.querySelector('.tagline-en');
-
-    if (aboutTitleCn) aboutTitleCn.textContent = t.module1.aboutTitle;
-    if (aboutTitleEn) aboutTitleEn.textContent = t.module1.aboutTitleEn;
-    if (aboutTextCn) aboutTextCn.textContent = t.module1.aboutDesc;
-    if (aboutTextEn) aboutTextEn.textContent = t.module1.aboutDescEn;
-    if (taglineCn) taglineCn.textContent = t.module1.tagline;
-    if (taglineEn) taglineEn.textContent = t.module1.taglineEn;
-
-    // Module 2 - Why Us Advantages
+    // Module 2 - Why Us section headings (not covered by applyLang)
     const whyTitle = document.querySelector('.why-title');
     const whySubtitle = document.querySelector('.why-subtitle');
     if (whyTitle) whyTitle.textContent = t.module2.title;
     if (whySubtitle) whySubtitle.textContent = t.module2.subtitle;
-
-    // Update advantage items
-    const advantageItems = document.querySelectorAll('.advantage-item');
-    advantageItems.forEach((item, index) => {
-        if (t.module2.cards[index]) {
-            const titleCn = item.querySelector('.advantage-title-cn');
-            const titleEn = item.querySelector('.advantage-title-en');
-            if (titleCn) titleCn.textContent = t.module2.cards[index].title;
-            if (titleEn) titleEn.textContent = t.module2.cards[index].titleEn;
-        }
-    });
 
     // Update description panel for active item
     const activeItem = document.querySelector('.advantage-item.active');
@@ -321,12 +288,10 @@ function updateContent() {
 
     // Module 3 - Portfolio
     const portfolioTitleCn = document.querySelector('.portfolio-title-cn');
-    const portfolioTitleEn = document.querySelector('.portfolio-title-en');
     const portfolioSubtitle = document.querySelector('.portfolio-subtitle');
 
     if (portfolioTitleCn) portfolioTitleCn.textContent = t.module3.title;
-    if (portfolioTitleEn) portfolioTitleEn.textContent = t.module3.titleEn;
-    if (portfolioSubtitle) portfolioSubtitle.textContent = `${t.module3.subtitleEn} · ${t.module3.subtitle}`;
+    if (portfolioSubtitle) portfolioSubtitle.textContent = `2020-2026`;
 
     // Update portfolio cases
     const caseNumbers = document.querySelectorAll('.case-number');
@@ -412,13 +377,11 @@ function updateContent() {
         }
     });
 
-    // Footer
-    document.querySelector('.footer-section.company h4').textContent = t.footer.company;
-    document.querySelector('.footer-section.company .address').textContent = t.footer.address;
-    document.querySelector('.footer-section.company .hours').textContent = t.footer.hours;
-    document.querySelector('.footer-section.contact .email').textContent = t.footer.email;
-    document.querySelector('.footer-section.contact .phone').textContent = t.footer.phone;
-    document.querySelector('.footer-bottom p').textContent = t.footer.copyright;
+    // Footer - now handled by i18n.js applyLang(), skipping duplicate updates
+    // document.querySelector('.footer-section.company h4').textContent = t.footer.company;
+    // document.querySelector('.footer-section.company .address').textContent = t.footer.address;
+    // document.querySelector('.footer-section.company .hours').textContent = t.footer.hours;
+    // document.querySelector('.footer-bottom p').textContent = t.footer.copyright;
 }
 
 // ==================== Hero Slider ====================
@@ -595,16 +558,10 @@ function initFullPage() {
 
             // Update header navigation active state
             $('.nav-menu a').removeClass('active');
-            const activeSectionMap = {
-                1: 0, // Hero -> Home
-                2: 1, // About -> About
-                3: 2, // Why Us -> Why
-                4: 3, // Portfolio -> Portfolio
-                5: 4  // Footer -> Contact
-            };
-            const activeNavIndex = activeSectionMap[index];
-            if (activeNavIndex !== undefined) {
-                $('.nav-menu a').eq(activeNavIndex).addClass('active');
+            // Only highlight Home nav when on section 1 (Hero)
+            // Other nav items link to subpages, not sections
+            if (index === 1) {
+                $('.nav-menu a').eq(0).addClass('active');
             }
         },
         onLeave: function(index, nextIndex, direction) {
